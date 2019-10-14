@@ -26,6 +26,7 @@
             <li {% if active_page == "dollar-euro" %}class="active"{% endif %}><a href="/dollarToEuro">Dollar-Euro</a></li>
             <li {% if active_page == "feet-meters" %}class="active"{% endif %}><a href="/FeetToMeters">Feet-Meters</a></li>
             <li {% if active_page == "pound-kg" %}class="active"{% endif %}><a href="/PoundToKg">Pound-Kg</a></li>
+			<li {% if active_page == "pound-kg" %}class="active"{% endif %}><a href="/PoundToKg">Pound-Kg</a></li>
           </ul>
       </div>
     </nav>
@@ -34,7 +35,7 @@
 	<h1>Convert</h1>{% block content %}{% endblock %}
 	
 	<form action='/response'>
-      What is your favorite color?<br>
+      Input:<br>
       <input type="text" name="color">
       <br><br>
       <input type="submit">

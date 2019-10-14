@@ -18,5 +18,9 @@ def render_page2():
 def render_page3():
     return render_template('pound-kg.html')
     
+@app.route("/response")
+def render_page3():
+    return render_template('response.html')
+    
 if __name__=="__main__":
     app.run(debug=False)
