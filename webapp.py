@@ -6,15 +6,15 @@ app = Flask(__name__)
 def render_main():
     return render_template('home.html')
 
-@app.route("/dollar-euro")
+@app.route("/dollarToEuro")
 def render_page1():
     return render_template('dollar-euro.html')
 
-@app.route("/feet-meters")
+@app.route("/FeetToMeters")
 def render_page2():
     return render_template('feet-meters.html')
     
-@app.route("/pound-kg")
+@app.route("/PoundToKg")
 def render_page3():
     return render_template('pound-kg.html')
     
