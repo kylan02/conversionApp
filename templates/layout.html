@@ -22,11 +22,9 @@
           <a class="navbar-brand" href=".">Conversions!</a>
         </div>
           <ul class="nav navbar-nav">
-            <li {% if active_page == "home" %}class="active"{% endif %}><a href=".">Home</a></li>
             <li {% if active_page == "dollar-euro" %}class="active"{% endif %}><a href="/dollarToEuro">Dollar-Euro</a></li>
             <li {% if active_page == "feet-meters" %}class="active"{% endif %}><a href="/FeetToMeters">Feet-Meters</a></li>
             <li {% if active_page == "pound-kg" %}class="active"{% endif %}><a href="/PoundToKg">Pound-Kg</a></li>
-			<li {% if active_page == "pound-kg" %}class="active"{% endif %}><a href="/PoundToKg">Pound-Kg</a></li>
           </ul>
       </div>
     </nav>
@@ -34,12 +32,14 @@
     <!--page content-->
 	<h1>Convert</h1>{% block content %}{% endblock %}
 	
-	<form action='/response'>
+	<form action='/{% block page %}{% endblock %}'>
       Input:<br>
       <input type="text" name="amount">
       <br><br>
       <input type="submit">
     </form>
+	<h2>Answer:</h2>
+	<h2>{{ responseFromServer }}</h2>
 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
